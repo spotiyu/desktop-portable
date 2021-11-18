@@ -29,7 +29,7 @@ func init() {
 	}
 
 	// Init app
-	if app, err = portapps.NewWithCfg("postman-portable", "Postman", cfg); err != nil {
+	if app, err = portapps.NewWithCfg("github-desktop-portable", "GithubDesktop", cfg); err != nil {
 		log.Fatal().Err(err).Msg("Cannot initialize application. See log file for more info.")
 	}
 }
@@ -38,7 +38,7 @@ func main() {
 	utl.CreateFolder(app.DataPath)
 	electronAppPath := app.ElectronAppPath()
 
-	app.Process = utl.PathJoin(electronAppPath, "Postman.exe")
+	app.Process = utl.PathJoin(electronAppPath, "GithubDesktop.exe")
 	app.WorkingDir = electronAppPath
 	app.Args = []string{
 		"--user-data-dir=" + app.DataPath,
@@ -48,7 +48,7 @@ func main() {
 	if cfg.Cleanup {
 		defer func() {
 			utl.Cleanup([]string{
-				path.Join(os.Getenv("APPDATA"), "Postman"),
+				path.Join(os.Getenv("APPDATA"), "GithubDesktop"),
 			})
 		}()
 	}
