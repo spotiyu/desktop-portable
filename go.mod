@@ -1,4 +1,4 @@
-module github.com/portapps/desktop-portable
+module github.com/spotiyu/desktop-portable
 
 go 1.16
 
