@@ -5,4 +5,4 @@
 * GithubDesktop 2.9.4
 * Portapps 3.3.1
 
-* Initial version based on Postman 2.9.4
+* Initial version based on GithubDesktop 2.9.4
