@@ -1,4 +1,4 @@
-module github.com/portapps/postman-portable
+module github.com/portapps/desktop-portable
 
 go 1.16
 
